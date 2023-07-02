@@ -49,7 +49,6 @@ public class EmployeeService {
     @Transactional
     public Employee save(EmployeeDto employeeDto) {
         Employee employee = employeeMapper.map(employeeDto, Employee.class);
-        employee.setId(UUID.randomUUID());
         return employeeRepository.save(employee);
     }
 
